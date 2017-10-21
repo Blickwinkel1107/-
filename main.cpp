@@ -8,56 +8,56 @@
 
 using namespace std;
 
-enum classes //¿Î³ÌÃ¶¾ÙÀàĞÍ£¬±ãÓÚËæ»ú·ÃÎÊ³É¼¨Êı×é
+enum classes //è¯¾ç¨‹æšä¸¾ç±»å‹ï¼Œä¾¿äºéšæœºè®¿é—®æˆç»©æ•°ç»„
 {
-	Ó¢Óï,ÕşÖÎ,
-	Êı¾İ½á¹¹,²Ù×÷ÏµÍ³,¼ÆËã»úÏµÍ³,
-	³ÌĞòÉè¼Æ,¼ÆËãË¼Î¬,±àÒëÔ­Àí,Èí¼ş¹¤³Ì,ĞÅÏ¢°²È«,¼ÆËã»úÍøÂç,Êı¾İ¿â¸ÅÂÛ,Êı¾İÍÚ¾ò,¶àÃ½Ìå¼¼Êõ,ÈË¹¤ÖÇÄÜ
+	è‹±è¯­,æ”¿æ²»,
+	æ•°æ®ç»“æ„,æ“ä½œç³»ç»Ÿ,è®¡ç®—æœºç³»ç»Ÿ,
+	ç¨‹åºè®¾è®¡,è®¡ç®—æ€ç»´,ç¼–è¯‘åŸç†,è½¯ä»¶å·¥ç¨‹,ä¿¡æ¯å®‰å…¨,è®¡ç®—æœºç½‘ç»œ,æ•°æ®åº“æ¦‚è®º,æ•°æ®æŒ–æ˜,å¤šåª’ä½“æŠ€æœ¯,äººå·¥æ™ºèƒ½
 };
 
-vector<string> info //¿Î³ÌÃûÊı×é£¬±ãÓÚ±ãÓÚËæ»ú·ÃÎÊ²¢´òÓ¡¿Î³ÌÃû
+vector<string> info //è¯¾ç¨‹åæ•°ç»„ï¼Œä¾¿äºä¾¿äºéšæœºè®¿é—®å¹¶æ‰“å°è¯¾ç¨‹å and fuck you!!!!
 {
-	"Ó¢Óï","ÕşÖÎ",
-	"Êı¾İ½á¹¹","²Ù×÷ÏµÍ³","¼ÆËã»úÏµÍ³",
-	"³ÌĞòÉè¼Æ","¼ÆËãË¼Î¬","±àÒëÔ­Àí","Èí¼ş¹¤³Ì","ĞÅÏ¢°²È«","¼ÆËã»úÍøÂç","Êı¾İ¿â¸ÅÂÛ","Êı¾İÍÚ¾ò","¶àÃ½Ìå¼¼Êõ","ÈË¹¤ÖÇÄÜ"
+	"è‹±è¯­","æ”¿æ²»",
+	"æ•°æ®ç»“æ„","æ“ä½œç³»ç»Ÿ","è®¡ç®—æœºç³»ç»Ÿ",
+	"ç¨‹åºè®¾è®¡","è®¡ç®—æ€ç»´","ç¼–è¯‘åŸç†","è½¯ä»¶å·¥ç¨‹","ä¿¡æ¯å®‰å…¨","è®¡ç®—æœºç½‘ç»œ","æ•°æ®åº“æ¦‚è®º","æ•°æ®æŒ–æ˜","å¤šåª’ä½“æŠ€æœ¯","äººå·¥æ™ºèƒ½"
 };
 
-struct TMP	//¶ÁÈëÄ³¿Î³Ì³É¼¨µ¥Ê±ÓÃÓÚ½ÓÊÕĞÅÏ¢µÄ½á¹¹Ìå
+struct TMP	//è¯»å…¥æŸè¯¾ç¨‹æˆç»©å•æ—¶ç”¨äºæ¥æ”¶ä¿¡æ¯çš„ç»“æ„ä½“fuck!
 {
-	string number;	//Ñ§ºÅ
-	string name;	//ĞÕÃû
-	int score;	//¿Î³Ì·ÖÊı
-	int pos;	//¿Î³ÌÃû£¨Ã¶¾Ù£©
-	TMP(string,string,int,int);	//Ñ§ºÅ+ĞÕÃû+¿Î³Ì·ÖÊı+¿Î³ÌÃû£¨Ã¶¾Ù£©µÄ¹¹Ôìº¯Êı
+	string number;	//123123123
+	string name;	//å§“å
+	int score;	//è¯¾ç¨‹åˆ†æ•°
+	int pos;	//è¯¾ç¨‹åï¼ˆæšä¸¾ï¼‰
+	TMP(string,string,int,int);	//å­¦å·+å§“å+è¯¾ç¨‹åˆ†æ•°+è¯¾ç¨‹åï¼ˆæšä¸¾ï¼‰çš„æ„é€ å‡½æ•°
 };
 
-struct STU	//Ñ§ÉúĞÅÏ¢½á¹¹Ìå
+struct STU	//å­¦ç”Ÿä¿¡æ¯ç»“æ„ä½“
 {
-	string number;	//Ñ§ºÅ
-	string name;	//ĞÕÃû
-	vector<int> score;	//¸÷¿Æ³É¼¨
-	double gpa;	//Ñ§·Ö¼¨
-	int credit;	//Ñ§·Ö
-	int rank;	//ÅÅÃû
-	STU()=default; //Ä¬ÈÏ¹¹Ôìº¯Êı
-	STU(string,string);	//Ñ§ºÅ+ĞÕÃûµÄ¹¹Ôìº¯Êı
-	STU(string,string,int,int); //Ñ§ºÅ+ĞÕÃû+¿Î³Ì·ÖÊı+¿Î³ÌÃû£¨Ã¶¾Ù£©µÄ¹¹Ôìº¯Êı
-	void merge(TMP&); //µ¼Èë³É¼¨
-	void calc(); //¼ÆËãÑ§·Ö¼¨¡¢Ñ§·Ö
+	string number;	//å­¦å·
+	string name;	//å§“å
+	vector<int> score;	//å„ç§‘æˆç»©
+	double gpa;	//å­¦åˆ†ç»©
+	int credit;	//å­¦åˆ†
+	int rank;	//æ’å
+	STU()=default; //é»˜è®¤æ„é€ å‡½æ•°
+	STU(string,string);	//å­¦å·+å§“åçš„æ„é€ å‡½æ•°
+	STU(string,string,int,int); //å­¦å·+å§“å+è¯¾ç¨‹åˆ†æ•°+è¯¾ç¨‹åï¼ˆæšä¸¾ï¼‰çš„æ„é€ å‡½æ•°
+	void merge(TMP&); //å¯¼å…¥æˆç»©
+	void calc(); //è®¡ç®—å­¦åˆ†ç»©ã€å­¦åˆ†
 };
 
-vector<STU> list_14; //14¼¶Ñ§Éú³É¼¨»ã×Ü±í
-vector<STU> list_15; //15¼¶Ñ§Éú³É¼¨»ã×Ü±í
-string fname; //µ±Ç°´ò¿ªÎÄ¼şµÄÎÄ¼şÃû
+vector<STU> list_14; //14çº§å­¦ç”Ÿæˆç»©æ±‡æ€»è¡¨
+vector<STU> list_15; //15çº§å­¦ç”Ÿæˆç»©æ±‡æ€»è¡¨
+string fname; //å½“å‰æ‰“å¼€æ–‡ä»¶çš„æ–‡ä»¶å
 
-void OutCredit(int);	//½ÓÊÕint A£¬´òÓ¡AÄê¼¶Ñ§Éú³É¼¨ÅÅÃûÖÁ¡°d://AÄê¼¶³É¼¨ÅÅÃû.txt¡±ÎÄ¼ş
-void ReadIn();	//¶ÁÈëËùÓĞÎÄ±¾ÎÄ¼ş£¬¼ì²é³É¼¨µ¥ÉÏµÄ´íÎó£¬¿±Õıºó±£´æ¸÷Äê¼¶Ñ§ÉúÃûµ¥²¢»ã×Ü³É¼¨
-bool CheckUp(vector<TMP>&);	//½ÓÊÕÄ³¿Î³É¼¨µ¥Êı×é£¬¼ì²é´íÎó²¢ÌáÊ¾Ğ£Õı£¬ÈôÓĞ´íÎó»á¸üĞÂÔ­³É¼¨µ¥ÎÄ¼ş
-void Refresh(vector<TMP>&,string);	//¸üĞÂÔ­³É¼¨µ¥ÎÄ¼ş
-void Asm(int);	//½ÓÊÕint A£¬´òÓ¡AÄê¼¶Ñ§Éú»ã×Ü³É¼¨ÖÁ¡°d://AÄê¼¶³É¼¨»ã×Ü.txt¡±ÎÄ¼ş
-void VerifyA(); //²éÑ¯³É¼¨µ¥
-void VerifyB(); //²éÑ¯Ä³¿Î³ÌÎŞ³É¼¨µÄÑ§ÉúÃûµ¥
-void VerifyC(); //²éÑ¯Ñ§·Ö²»¹»27µÄÑ§ÉúÃûµ¥
+void OutCredit(int);	//æ¥æ”¶int Aï¼Œæ‰“å°Aå¹´çº§å­¦ç”Ÿæˆç»©æ’åè‡³â€œd://Aå¹´çº§æˆç»©æ’å.txtâ€æ–‡ä»¶
+void ReadIn();	//è¯»å…¥æ‰€æœ‰æ–‡æœ¬æ–‡ä»¶ï¼Œæ£€æŸ¥æˆç»©å•ä¸Šçš„é”™è¯¯ï¼Œå‹˜æ­£åä¿å­˜å„å¹´çº§å­¦ç”Ÿåå•å¹¶æ±‡æ€»æˆç»©
+bool CheckUp(vector<TMP>&);	//æ¥æ”¶æŸè¯¾æˆç»©å•æ•°ç»„ï¼Œæ£€æŸ¥é”™è¯¯å¹¶æç¤ºæ ¡æ­£ï¼Œè‹¥æœ‰é”™è¯¯ä¼šæ›´æ–°åŸæˆç»©å•æ–‡ä»¶
+void Refresh(vector<TMP>&,string);	//æ›´æ–°åŸæˆç»©å•æ–‡ä»¶
+void Asm(int);	//æ¥æ”¶int Aï¼Œæ‰“å°Aå¹´çº§å­¦ç”Ÿæ±‡æ€»æˆç»©è‡³â€œd://Aå¹´çº§æˆç»©æ±‡æ€».txtâ€æ–‡ä»¶
+void VerifyA(); //æŸ¥è¯¢æˆç»©å•
+void VerifyB(); //æŸ¥è¯¢æŸè¯¾ç¨‹æ— æˆç»©çš„å­¦ç”Ÿåå•
+void VerifyC(); //æŸ¥è¯¢å­¦åˆ†ä¸å¤Ÿ27çš„å­¦ç”Ÿåå•
 
 
 int main()
@@ -67,17 +67,17 @@ int main()
 	Asm(15);
 	OutCredit(14);
 	OutCredit(15);
-	cout<<string(10,'-')<<"²éÑ¯¹¦ÄÜ"<<string(10,'-')<<endl;
+	cout<<string(10,'-')<<"æŸ¥è¯¢åŠŸèƒ½"<<string(10,'-')<<endl;
 	while(true)
 	{
 		bool ed=false;
 		char choice;
-		cout<<"ÄúÏëÒª×öÊ²Ã´£¿"<<endl
-			<<"a.²éÑ¯³É¼¨µ¥"<<endl
-			<<"b.²éÑ¯Ä³¿Î³ÌÎŞ³É¼¨µÄÑ§ÉúÃûµ¥"<<endl
-			<<"c.²éÑ¯Ñ§·Ö²»¹»27µÄÑ§ÉúÃûµ¥"<<endl
-			<<"d.ÍË³ö³ÌĞò"<<endl
-			<<"ÇëÊäÈë²Ù×÷·û£º";
+		cout<<"æ‚¨æƒ³è¦åšä»€ä¹ˆï¼Ÿ"<<endl
+			<<"a.æŸ¥è¯¢æˆç»©å•"<<endl
+			<<"b.æŸ¥è¯¢æŸè¯¾ç¨‹æ— æˆç»©çš„å­¦ç”Ÿåå•"<<endl
+			<<"c.æŸ¥è¯¢å­¦åˆ†ä¸å¤Ÿ27çš„å­¦ç”Ÿåå•"<<endl
+			<<"d.é€€å‡ºç¨‹åº"<<endl
+			<<"è¯·è¾“å…¥æ“ä½œç¬¦ï¼š";
 		cin>>choice;
 		cout<<string(50,'-')<<endl;
 		switch(choice)
@@ -103,19 +103,19 @@ void OutCredit(int grade)
 	if(grade==14)
 	{
 		p=&list_14;
-		filename="d://14¼¶³É¼¨ÅÅÃû.txt";
+		filename="d://14çº§æˆç»©æ’å.txt";
 	}
 	else
 	{
 		p=&list_15;
-		filename="d://15¼¶³É¼¨ÅÅÃû.txt";
+		filename="d://15çº§æˆç»©æ’å.txt";
 	}
 	vector<STU>& tbl=*p;
 	fout.open(filename);
 	for(int i=0;i<tbl.size();i++)
 		tbl[i].calc();
 	sort(tbl.begin(),tbl.end(),[](STU a,STU b){ return (a.gpa-b.gpa)>=1e-6; });
-	fout<<setw(9)<<"Ñ§ºÅ"<<setw(11)<<"ĞÕÃû"<<setw(11)<<"Ñ§·Ö¼¨ÅÅÃû"<<setw(9)<<"Ñ§·Ö¼¨"<<endl;
+	fout<<setw(9)<<"å­¦å·"<<setw(11)<<"å§“å"<<setw(11)<<"å­¦åˆ†ç»©æ’å"<<setw(9)<<"å­¦åˆ†ç»©"<<endl;
 	int step=0;
 	for(auto it=tbl.begin();it!=tbl.end();++it)
 	{
@@ -139,12 +139,12 @@ void ReadIn()
 	list_14.reserve(100);
 	list_15.reserve(100);
 
-	fin.open("d://14¼¶Ñ§ÉúÃûµ¥.txt");
+	fin.open("d://14çº§å­¦ç”Ÿåå•.txt");
 	while(fin>>number>>name)
 		list_14.push_back(STU(number,name));
 	fin.close();
 
-	fin.open("d://15¼¶Ñ§ÉúÃûµ¥.txt");
+	fin.open("d://15çº§å­¦ç”Ÿåå•.txt");
 	while(fin>>number>>name)
 		list_15.push_back(STU(number,name));
 	fin.close();
@@ -156,9 +156,9 @@ void ReadIn()
 		vector<TMP> tmp;
 		int score;
 
-		if(Ó¢Óï<=i && i<=ÕşÖÎ)
+		if(è‹±è¯­<=i && i<=æ”¿æ²»)
 		{
-			fname=string("14¼¶"+info[i]+"³É¼¨");
+			fname=string("14çº§"+info[i]+"æˆç»©");
 			filename="d://"+fname+".txt";
 			fin.open(filename);
 			while(fin>>number>>name>>score)
@@ -166,11 +166,11 @@ void ReadIn()
 			fin.close();
 			if(!CheckUp(tmp))
 				Refresh(tmp,filename);
-			tmp.clear(); //Çå¿Õ
-			fname=string("15¼¶"+info[i]+"³É¼¨");
+			tmp.clear(); //æ¸…ç©º
+			fname=string("15çº§"+info[i]+"æˆç»©");
 		}
 		else
-			fname=string(info[i]+"³É¼¨");
+			fname=string(info[i]+"æˆç»©");
 		filename="d://"+fname+".txt";
 		fin.open(filename);
 		while(fin>>number>>name>>score)
@@ -178,7 +178,7 @@ void ReadIn()
 		fin.close();
 		if(!CheckUp(tmp))
 			Refresh(tmp,filename);
-		tmp.clear(); //Çå¿Õ
+		tmp.clear(); //æ¸…ç©º
 	}
 }
 
@@ -206,17 +206,17 @@ bool CheckUp(vector<TMP>& vec)
 		{
 			flag=false;
 			char choice;
-			cout<<fname<<".txtÖĞ"<<endl
-				<<"Î´ÕÒµ½Ñ§ºÅÎª"<<num<<",ĞÕÃûÎª"<<name<<"µÄÑ§Éú£¡"<<endl
-				<<"ÄúĞèÒªĞ£Õı³É¼¨µ¥ÄÚ¸ÃÑ§ÉúµÄĞÅÏ¢£¡"<<endl
-				<<"a.É¾³ı¸ÃÑ§ÉúĞÅÏ¢"<<endl
-				<<"b.ĞŞ¸Ä¸ÃÑ§ÉúµÄÑ§ºÅ»òÕßĞÕÃû"<<endl
-				<<"ÇëÊäÈë²Ù×÷·û£º";
+			cout<<fname<<".txtä¸­"<<endl
+				<<"æœªæ‰¾åˆ°å­¦å·ä¸º"<<num<<",å§“åä¸º"<<name<<"çš„å­¦ç”Ÿï¼"<<endl
+				<<"æ‚¨éœ€è¦æ ¡æ­£æˆç»©å•å†…è¯¥å­¦ç”Ÿçš„ä¿¡æ¯ï¼"<<endl
+				<<"a.åˆ é™¤è¯¥å­¦ç”Ÿä¿¡æ¯"<<endl
+				<<"b.ä¿®æ”¹è¯¥å­¦ç”Ÿçš„å­¦å·æˆ–è€…å§“å"<<endl
+				<<"è¯·è¾“å…¥æ“ä½œç¬¦ï¼š";
 			cin>>choice;
 			if(choice=='a')
 			{
 				it=vec.erase(it);
-				cout<<"É¾³ı³É¹¦£¡"<<endl<<endl;
+				cout<<"åˆ é™¤æˆåŠŸï¼"<<endl<<endl;
 				continue;
 			}
 			else
@@ -253,26 +253,26 @@ bool CheckUp(vector<TMP>& vec)
 				index2+=index1+1;
 				if(index1==-1 && index2==-1)
 				{
-					cout<<"²»´æÔÚÏàÍ¬Ñ§ºÅ»òĞÕÃûµÄÑ§Éú£¬×Ô¶¯É¾³ı"<<endl
-						<<"É¾³ı³É¹¦£¡"<<endl<<endl;
+					cout<<"ä¸å­˜åœ¨ç›¸åŒå­¦å·æˆ–å§“åçš„å­¦ç”Ÿï¼Œè‡ªåŠ¨åˆ é™¤"<<endl
+						<<"åˆ é™¤æˆåŠŸï¼"<<endl<<endl;
 					it=vec.erase(it);
 					continue;
 				}
-				cout<<"ÎªÄúÍÆ¼öĞŞ¸ÄÎªÈçÏÂµÄÑ§ÉúĞÅÏ¢"<<endl
-					<<"Ñ¡Ôñºó£¬¸ÃÑ§ÉúĞÅÏ¢½«Ìæ´úÔ­ÓĞµÄ´íÎóÑ§ÉúĞÅÏ¢£º"<<endl;
+				cout<<"ä¸ºæ‚¨æ¨èä¿®æ”¹ä¸ºå¦‚ä¸‹çš„å­¦ç”Ÿä¿¡æ¯"<<endl
+					<<"é€‰æ‹©åï¼Œè¯¥å­¦ç”Ÿä¿¡æ¯å°†æ›¿ä»£åŸæœ‰çš„é”™è¯¯å­¦ç”Ÿä¿¡æ¯ï¼š"<<endl;
 				if(index1!=-1)
 				{
-					cout<<"Ñ§ºÅÏàÍ¬£¬ĞÕÃû²»Í¬µÄÑ§Éú£º"<<endl;
+					cout<<"å­¦å·ç›¸åŒï¼Œå§“åä¸åŒçš„å­¦ç”Ÿï¼š"<<endl;
 					for(int i=0;i<=index1;i++)
-						cout<<i+1<<".Ñ§ºÅ£º"<<t[i].number<<"  ĞÕÃû£º"<<t[i].name<<endl;
+						cout<<i+1<<".å­¦å·ï¼š"<<t[i].number<<"  å§“åï¼š"<<t[i].name<<endl;
 				}
 				if(index2!=index1)
 				{
-					cout<<"ĞÕÃûÏàÍ¬£¬Ñ§ºÅ²»Í¬µÄÑ§Éú£º"<<endl;
+					cout<<"å§“åç›¸åŒï¼Œå­¦å·ä¸åŒçš„å­¦ç”Ÿï¼š"<<endl;
 					for(int i=index1+1;i<=index2;i++)
-						cout<<i+1<<".Ñ§ºÅ£º"<<t[i].number<<"  ĞÕÃû£º"<<t[i].name<<endl;
+						cout<<i+1<<".å­¦å·ï¼š"<<t[i].number<<"  å§“åï¼š"<<t[i].name<<endl;
 				}
-				cout<<"ÇëÊäÈëÍÆ¼öÑ§ÉúµÄĞòºÅ£º";
+				cout<<"è¯·è¾“å…¥æ¨èå­¦ç”Ÿçš„åºå·ï¼š";
 				cin>>choice;
 				choice--;
 				STU& tar=t[choice];
@@ -281,7 +281,7 @@ bool CheckUp(vector<TMP>& vec)
 				it->name=tar.name;
 				it->number=tar.number;
 				++it;
-				cout<<"ĞŞ¸Ä³É¹¦£¡"<<endl<<endl;
+				cout<<"ä¿®æ”¹æˆåŠŸï¼"<<endl<<endl;
 			}
 		}
 	}
@@ -306,17 +306,17 @@ void Asm(int grade)
 	vector<STU>* p;
 	if(grade==14)
 	{
-		filename="d://14¼¶³É¼¨»ã×Ü.txt";
+		filename="d://14çº§æˆç»©æ±‡æ€».txt";
 		p=&list_14;
 	}
 	else
 	{
-		filename="d://15¼¶³É¼¨»ã×Ü.txt";
+		filename="d://15çº§æˆç»©æ±‡æ€».txt";
 		p=&list_15;
 	}
 	vector<STU>& table=*p;
 	fout.open(filename);
-	fout<<setw(9)<<"Ñ§ºÅ"<<setw(11)<<"ĞÕÃû";
+	fout<<setw(9)<<"å­¦å·"<<setw(11)<<"å§“å";
 	for(int i=0;i<info.size();i++)
 	{
 		fout<<setw(2+info[i].size())<<info[i];
@@ -340,7 +340,7 @@ void Asm(int grade)
 void VerifyA()
 {
 	string input;
-	cout<<"\nÇëÊäÈëÄúÏë²éÑ¯µÄÑ§ºÅ»òĞÕÃû£º";
+	cout<<"\nè¯·è¾“å…¥æ‚¨æƒ³æŸ¥è¯¢çš„å­¦å·æˆ–å§“åï¼š";
 	cin>>input;
 	vector<STU> t;
 	for(auto& x:list_14)
@@ -355,25 +355,25 @@ void VerifyA()
 	}
 	if(t.size()==0)
 	{
-		cout<<"ÎŞ¸ÃÑ§Éú£¡"<<endl;
+		cout<<"æ— è¯¥å­¦ç”Ÿï¼"<<endl;
 		return;
 	}
 	for(auto it=t.begin();it!=t.end();++it)
 	{
-		cout<<"Ñ§ºÅ:"<<it->number<<"   ĞÕÃû:"<<it->name<<endl
-			<<setw(11)<<"¿Î³ÌÃû"<<setw(10)<<"¿Î³Ì³É¼¨"<<setw(10)<<"¿Î³ÌÑ§·Ö"<<endl;
+		cout<<"å­¦å·:"<<it->number<<"   å§“å:"<<it->name<<endl
+			<<setw(11)<<"è¯¾ç¨‹å"<<setw(10)<<"è¯¾ç¨‹æˆç»©"<<setw(10)<<"è¯¾ç¨‹å­¦åˆ†"<<endl;
 		for(auto p=it->score.begin();p!=it->score.end();++p)
 		{
 			int index=p-(it->score.begin()),t=0;
-			if(Ó¢Óï<=index && index<=ÕşÖÎ)
+			if(è‹±è¯­<=index && index<=æ”¿æ²»)
 				t=4;
-			else if(index<=¼ÆËã»úÏµÍ³)
+			else if(index<=è®¡ç®—æœºç³»ç»Ÿ)
 				t=3;
 			else
 				t=2;
 			cout<<setw(11)<<info[index]<<setw(10)<<*p<<setw(10)<<t<<endl;
 		}
-		cout<<"ÒÑĞŞ×ÜÑ§·Ö:"<<it->credit<<"  Äê¼¶ÅÅÃû:"<<it->rank<<endl;
+		cout<<"å·²ä¿®æ€»å­¦åˆ†:"<<it->credit<<"  å¹´çº§æ’å:"<<it->rank<<endl;
 	}
 }
 
@@ -382,13 +382,13 @@ void VerifyB()
 	int grade;
 	string classname;
 	vector<STU>* p=&list_15;
-	cout<<"ÇëÊäÈëÄê¼¶£¨14»ò15£©:";
+	cout<<"è¯·è¾“å…¥å¹´çº§ï¼ˆ14æˆ–15ï¼‰:";
 	cin>>grade;
 	if(grade==14)
 		p=&list_14;
 	vector<STU>& tbl=*p;
 	vector<STU> t;
-	cout<<"ÇëÊäÈë¿Î³ÌÃû£º";
+	cout<<"è¯·è¾“å…¥è¯¾ç¨‹åï¼š";
 	cin>>classname;
 	int index=find(info.begin(),info.end(),classname)-info.begin();
 	for(auto& x:tbl)
@@ -398,10 +398,10 @@ void VerifyB()
 	}
 	if(t.size()==0)
 	{
-		cout<<"ËùÓĞÑ§Éú¶¼ÓĞ¸Ã¿Î³ÌÑ§·Ö£¡"<<endl;
+		cout<<"æ‰€æœ‰å­¦ç”Ÿéƒ½æœ‰è¯¥è¯¾ç¨‹å­¦åˆ†ï¼"<<endl;
 		return;
 	}
-	cout<<setw(9)<<"Ñ§ºÅ"<<string(5,' ')<<"ĞÕÃû"<<endl;
+	cout<<setw(9)<<"å­¦å·"<<string(5,' ')<<"å§“å"<<endl;
 	for(auto& x:t)
 		cout<<x.number<<string(5,' ')<<x.name<<endl;
 }
@@ -421,10 +421,10 @@ void VerifyC()
 	}
 	if(t.size()==0)
 	{
-		cout<<"ÎŞÑ§·Ö²»¹»27µÄÑ§Éú£¡"<<endl;
+		cout<<"æ— å­¦åˆ†ä¸å¤Ÿ27çš„å­¦ç”Ÿï¼"<<endl;
 		return ;
 	}
-	cout<<setw(9)<<"Ñ§ºÅ"<<string(5,' ')<<"ĞÕÃû"<<endl;
+	cout<<setw(9)<<"å­¦å·"<<string(5,' ')<<"å§“å"<<endl;
 	for(auto& x:t)
 		cout<<x.number<<string(5,' ')<<x.name<<endl;
 }
@@ -454,19 +454,19 @@ void STU::merge(TMP& b)
 void STU::calc()
 {
 	int sum=0,count=0;
-	for(int i=Ó¢Óï;i<=ÈË¹¤ÖÇÄÜ;i++)
+	for(int i=è‹±è¯­;i<=äººå·¥æ™ºèƒ½;i++)
 	{
 		if(score[i]>=60)
 		{
-			if(Ó¢Óï<=i && i<=ÕşÖÎ)
+			if(è‹±è¯­<=i && i<=æ”¿æ²»)
 				credit+=4;
-			else if(i<=¼ÆËã»úÏµÍ³)
+			else if(i<=è®¡ç®—æœºç³»ç»Ÿ)
 				credit+=3;
 			else
 				credit+=2;
 		}
 	}
-	for(int i=Ó¢Óï;i<=¼ÆËã»úÏµÍ³;i++)
+	for(int i=è‹±è¯­;i<=è®¡ç®—æœºç³»ç»Ÿ;i++)
 		sum+=score[i];
 	int op[12]={};
 	copy(score.begin()+5,score.end(),op);
